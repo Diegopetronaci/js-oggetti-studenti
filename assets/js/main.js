@@ -54,9 +54,12 @@ console.log(classe);
 //Dare la possibilità all’utente attraverso 3 prompt di aggiungere un nuovo oggetto...
 //...studente inserendo nell’ordine: nome, cognome e età.
 
-var nome = prompt("Inserisci Nome");
-var cognome = prompt("Inserisci Cognome");
-var eta = Number(prompt("Inserisci Età"));
+var nomeUtente = prompt("Inserisci Nome");
+var nome = nomeUtente.toUpperCase;
+var cognomeUtente = prompt("Inserisci Cognome");
+var cognome = cognomeUtente.toUpperCase;
+var etaUtente = Number(prompt("Inserisci Età"));
+var eta = etaUtente.toUpperCase;
 
 var nuovoOggetto = {
     nome,
