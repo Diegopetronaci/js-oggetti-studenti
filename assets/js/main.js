@@ -15,7 +15,7 @@ var studente = {
     cognome : "Petronaci",
     età : 21,
 }
-
+console.log(studente);
 
 //Stampare a schermo attraverso il for in tutte le proprietà.
 
@@ -40,15 +40,48 @@ var classe = [
     età: 28,
     },
     {
-    nome: "Andrea",
-    cognome: "D'Auria",
+    nome: "Antonio",
+    cognome: "Quattrocchi",
     età: 25,
     }
 ]
 
-for (var nome in classe) {
-    console.log(classe[nome]);
-    var studenteClasse = classe[nome];
-    var altroTitolo = `<h3> ${studenteClasse} </h3>`;
+console.log(classe);
+
+
+
+
+//Dare la possibilità all’utente attraverso 3 prompt di aggiungere un nuovo oggetto...
+//...studente inserendo nell’ordine: nome, cognome e età.
+
+var nome = prompt("Inserisci Nome");
+var cognome = prompt("Inserisci Cognome");
+var eta = Number(prompt("Inserisci Età"));
+
+var nuovoOggetto = {
+    nome,
+    cognome,
+    eta
+}
+
+console.log(nuovoOggetto);
+
+classe.push(nuovoOggetto);
+
+console.log(classe);
+
+//Ciclare su tutti gli studenti e stampare per ognuno, nome e cognome.
+
+for (var i = 0; i < classe.length; i++) {
+    console.log(classe[i].nome);
+    var studenteClasse = classe[i].nome;
+    var altroTitolo = `<div> ${studenteClasse} </div>`;
     document.getElementById("altro_titolo").insertAdjacentHTML("beforeend", altroTitolo);
+}
+
+for (var i = 0; i < classe.length; i++) {
+    console.log(classe[i].cognome);
+    var studenteClasse = classe[i].cognome;
+    var altroTitolo = `<div> ${studenteClasse} </div>`;
+    document.getElementById("altro_titolo_ancora").insertAdjacentHTML("beforeend", altroTitolo);
 }
